@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Dibujo para colorear</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+<h1>Mi dibujo fachero, facherito</h1>
+<ul>
+  <li><strong>Nombre y Apellido:</strong> Pepito Pepón</li>
+  <li><strong>Grado y Aula:</strong> 7mo Pou</li>
+  <li><strong>Dedicado a:</strong> Mi profesor favorito Luis</li>
+</ul>
+<svg viewBox="0 0 1000 600" class="dibujo cielo">
+
+    <!-- Sol -->
+    <circle class="sol" cx="120" cy="100" r="50"/>
+
+    <!-- Nubes -->
+    <g class="nube">
+        <circle class="nube-cuerpo" cx="280" cy="90" r="30"/>
+        <circle class="nube-cuerpo" cx="320" cy="70" r="40"/>
+        <circle class="nube-cuerpo" cx="370" cy="90" r="30"/>
+    </g>
+
+    <g class="nube">
+        <circle class="nube-cuerpo" cx="760" cy="120" r="25"/>
+        <circle class="nube-cuerpo" cx="800" cy="100" r="35"/>
+        <circle class="nube-cuerpo" cx="845" cy="120" r="25"/>
+    </g>
+
+    <!-- Césped -->
+    <rect class="cesped" x="0" y="420" width="1000" height="180"/>
+
+    <!-- Arbustos -->
+    <circle class="arbusto" cx="120" cy="430" r="50"/>
+    <circle class="arbusto" cx="180" cy="430" r="40"/>
+
+    <circle class="arbusto" cx="850" cy="430" r="50"/>
+    <circle class="arbusto" cx="910" cy="430" r="40"/>
+
+    <!-- Semáforo -->
+    <g class="semaforo">
+
+        <rect class="cuerpo-semaforo"
+              x="680"
+              y="180"
+              width="80"
+              height="180"
+              rx="10"/>
+
+        <circle class="luz-roja"
+                cx="720"
+                cy="220"
+                r="20"/>
+
+        <circle class="luz-amarilla"
+                cx="720"
+                cy="270"
+                r="20"/>
+
+        <circle class="luz-verde"
+                cx="720"
+                cy="320"
+                r="20"/>
+
+        <rect class="palo-semaforo"
+              x="710"
+              y="360"
+              width="20"
+              height="120"/>
+
+    </g>
+
+    <!-- Persona -->
+
+    <!-- Cabeza -->
+    <circle class="piel"
+            cx="450"
+            cy="180"
+            r="50"/>
+
+    <!-- Cabello -->
+    <path class="cabello"
+          d="M400 180
+             Q450 90 500 180
+             L500 150
+             Q450 80 400 150 Z"/>
+
+    <!-- Ojos -->
+    <circle class="ojo"
+            cx="435"
+            cy="175"
+            r="5"/>
+
+    <circle class="ojo"
+            cx="465"
+            cy="175"
+            r="5"/>
+
+    <!-- Sonrisa -->
+    <path class="boca"
+          d="M430 200 Q450 220 470 200"/>
+
+    <!-- Polo -->
+    <rect class="polo"
+          x="410"
+          y="230"
+          width="80"
+          height="100"/>
+
+    <!-- Brazos -->
+    <rect class="piel"
+          x="380"
+          y="240"
+          width="30"
+          height="90"/>
+
+    <rect class="piel"
+          x="490"
+          y="240"
+          width="30"
+          height="90"/>
+
+    <!-- Pantalón -->
+    <rect class="pantalon"
+          x="415"
+          y="330"
+          width="30"
+          height="90"/>
+
+    <rect class="pantalon"
+          x="455"
+          y="330"
+          width="30"
+          height="90"/>
+
+    <!-- Zapatos -->
+    <ellipse class="zapato"
+             cx="430"
+             cy="435"
+             rx="20"
+             ry="10"/>
+
+    <ellipse class="zapato"
+             cx="470"
+             cy="435"
+             rx="20"
+             ry="10"/>
+
+</svg>
+
+</body>
+</html>
