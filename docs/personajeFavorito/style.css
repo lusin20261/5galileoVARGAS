@@ -1,0 +1,194 @@
+/*======================================
+  PALETA DE COLORES
+======================================*/
+:root {
+    --color-primario: #5b5ff5;
+    --color-secundario: #ff8f70;
+}
+
+/*======================================
+  CONFIGURACIÓN GENERAL
+======================================*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+
+    background: linear-gradient(
+        135deg,
+        var(--color-primario),
+        var(--color-secundario)
+    );
+
+    min-height: 100vh;
+    color: #333;
+}
+
+/*======================================
+  HERO
+======================================*/
+.hero {
+    height: 70vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    background: linear-gradient(
+        135deg,
+        var(--color-primario),
+        var(--color-secundario)
+    );
+
+    color: white;
+}
+
+.hero-content {
+    animation: aparecer 1.5s ease;
+}
+
+.hero h1 {
+    font-size: clamp(3rem, 8vw, 6rem);
+    letter-spacing: 4px;
+    text-transform: uppercase;
+
+    text-shadow:
+        0 0 10px rgba(255,255,255,.5),
+        0 0 30px rgba(255,255,255,.3);
+
+    animation: flotar 3s ease-in-out infinite;
+}
+
+.hero p {
+    font-size: 1.4rem;
+    margin-top: 15px;
+}
+
+/*======================================
+  CONTENEDOR
+======================================*/
+main {
+    width: 90%;
+    max-width: 1100px;
+
+    margin: -80px auto 40px;
+}
+
+/*======================================
+  TARJETAS
+======================================*/
+.card {
+    background: white;
+
+    margin-bottom: 30px;
+    padding: 30px;
+
+    border-radius: 20px;
+
+    box-shadow: 0 10px 25px rgba(0,0,0,.15);
+
+    transition: .3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+.card h2 {
+    color: var(--color-primario);
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+.card img {
+    width: 100%;
+    max-width: 450px;
+
+    display: block;
+    margin: 20px auto;
+
+    border-radius: 15px;
+
+    transition: .4s;
+}
+
+.card img:hover {
+    transform: scale(1.05);
+}
+
+.card p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+/*======================================
+  FOOTER
+======================================*/
+footer {
+    text-align: center;
+
+    padding: 25px;
+
+    color: white;
+
+    background: rgba(0,0,0,.15);
+
+    backdrop-filter: blur(5px);
+}
+
+/*======================================
+  ANIMACIONES
+======================================*/
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes flotar {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/*======================================
+  RESPONSIVE
+======================================*/
+@media (max-width: 768px) {
+
+    .hero {
+        height: 55vh;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .card {
+        padding: 20px;
+    }
+
+    .card h2 {
+        font-size: 1.5rem;
+    }
+}
